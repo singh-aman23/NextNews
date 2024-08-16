@@ -1,0 +1,14 @@
+.header{
+    display : flex;
+    justify-content: space-between;
+    margin : 5%;
+    font-size: 2rem;   
+}
+.header a{
+    text-decoration: none;
+}
+
+.header a:hover{
+    transform : scale(1.1);
+}
+
