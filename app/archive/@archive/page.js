@@ -2,8 +2,8 @@ import { getAvailableNewsYears } from "@/lib/news"
 import Link from "next/link";
 import classes from './page.module.css';
 
-export default function ArchivePage(){
-    const links = getAvailableNewsYears();
+export default async function ArchivePage(){
+    const links = await getAvailableNewsYears();
 
     function displayYears(year){
         return <li key = {year} className = {classes.yearList}>

@@ -1,12 +1,12 @@
-import classes from './page.module.css';
-import NewsItem from '@/Components/NewsItem';
-import { DUMMY_NEWS } from '@/dummy-news';
+import { getAllNews } from "@/lib/news";
+import classes from "./page.module.css";
+import NewsItem from "@/Components/NewsItem";
 
-export default function News(){
-    return <>
-    <div className = {classes.news}>
-        <NewsItem news = {DUMMY_NEWS}/>
-    </div>
-
+export default async function News() {
+  const news = await getAllNews();
+  return (
+    <>
+      <div className={classes.news}><NewsItem news = {news}/></div>
     </>
+  );
 }
